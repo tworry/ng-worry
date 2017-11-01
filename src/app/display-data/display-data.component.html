@@ -1,0 +1,15 @@
+<h1 style="padding:16px 0;">显示数据</h1>
+<div nz-row [nzGutter]="8">
+
+    <div nz-col [nzSpan]="12" *ngFor="let item of data">
+        <nz-card>
+            <ng-template #title>
+                {{item.title}}
+            </ng-template>
+            <ng-template #body>
+                <pre><code highlight [code]="item.code"></code></pre>
+            </ng-template>
+        </nz-card>
+    </div>
+
+</div>
